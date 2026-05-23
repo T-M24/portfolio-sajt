@@ -1,5 +1,5 @@
 body {
-  background-color: #361d2e;
+  background-color: #58304b;
   --serif: 'Cormorant Garamond', serif;
   --mono: 'DM Mono', monospace;
   --sans: 'Outfit', sans-serif;
@@ -102,4 +102,129 @@ nav {
   justify-content: center;
   padding: 6rem 3rem 6rem 3rem;
   border-right: 1px solid var(--border);
+}
+
+.hero-tag {
+  font-family: var(--mono);
+  font-size: 0.65rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--rose);
+  margin-bottom: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.hero-tag::before {
+  content: '';
+  width: 2rem;
+  height: 1px;
+  background: var(--rose)
+}
+
+h1 {
+  font-family: var(--serif);
+  font-size: clamp(3.5rem, 6vw, 5.5rem);
+  font-weight: 300;
+  line-height: 1.05;
+  letter-spacing: -0.01em;
+  color: var(--ink);
+  margin-bottom: 1rem;
+}
+
+h1 em {
+  font-style: italic;
+  color: var(--rose)
+}
+
+.hero-sub {
+  font-size: 0.95rem;
+  color: var(--dust);
+  line-height: 1.7;
+  max-width: 38ch;
+  margin-bottom: 3rem;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 1rem;
+  align-items: center
+}
+
+.btn-primary {
+  font-family: var(--mono);
+  font-size: 0.65rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 0.9rem 2rem;
+  background: var(--ink);
+  color: var(--cream);
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.btn-primary:hover {
+  background: var(--rose)
+}
+
+.btn-ghost {
+  font-family: var(--mono);
+  font-size: 0.65rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 0.9rem 2rem;
+  background: transparent;
+  color: white;
+  border: 1px solid var(--border);
+  cursor: pointer;
+  transition: all 0.3s;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.btn-ghost:hover {
+  border-color: var(--ink)
+}
+
+.hero-right {
+  position: relative;
+  overflow: hidden;
+  background: var(--ink);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+
+.hero-mosaic-item {
+  border: 0.5px solid rgba(255, 255, 255, 0.08);
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+}
+
+.hero-mosaic-item:hover .mosaic-overlay {
+  opacity: 1
+}
+
+.mosaic-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(196, 120, 90, 0.4);
+  opacity: 0;
+  transition: opacity 0.4s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mosaic-overlay span {
+  font-family: var(--mono);
+  font-size: 0.6rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: white;
 }

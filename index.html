@@ -86,5 +86,255 @@
         </div>
       </div>
     </section>
+
+    <!-- SVI RADOVI SEKCIJA!! -->
+    <section id="work">
+      <div class="section-header">
+        <div>
+          <div class="section-tag">Portfolio</div>
+          <h2>Izabrani <em>radovi</em></h2>
+        </div>
+        <div class="carousel-nav">
+          <button class="carousel-arrow" id="prev" onclick="carouselPrev()">
+            ←
+          </button>
+          <span class="carousel-count"
+            ><span id="cur">1</span> / <span id="total">1</span></span
+          >
+          <button class="carousel-arrow" id="next" onclick="carouselNext()">
+            →
+          </button>
+        </div>
+      </div>
+
+      <div class="filter-bar">
+        <button class="filter-btn active" onclick="filterWork(this, 'all')">
+          Svi radovi
+        </button>
+        <button class="filter-btn" onclick="filterWork(this, 'poster')">
+          Posteri
+        </button>
+        <button class="filter-btn" onclick="filterWork(this, 'invitation')">
+          Pozivnice
+        </button>
+        <button class="filter-btn" onclick="filterWork(this, 'instagram')">
+          Instagram
+        </button>
+      </div>
+
+      <div class="carousel-wrapper">
+        <div class="carousel-track" id="carouselTrack">
+          <!-- STAVKA 1 -->
+          <div class="carousel-item" data-cat="poster">
+            <div class="item-preview-wrap">
+              <img src="media/lanci ljubavi.png" alt="Lanci ljubavi" />
+            </div>
+            <div class="item-info">
+              <div class="item-category">Poster</div>
+              <div class="item-title">Lanci ljubavi</div>
+              <div class="item-desc">Opis rada...</div>
+            </div>
+          </div>
+
+          <!-- STAVKA 2 -->
+          <div class="carousel-item" data-cat="invitation">
+            <div class="item-preview-wrap">
+              <img src="media/pozivnica jubilej.png" alt="Pozivnica jubilej" />
+            </div>
+            <div class="item-info">
+              <div class="item-category">Pozivnica</div>
+              <div class="item-title">Unijin rođendan</div>
+              <div class="item-desc">Opis rada...</div>
+            </div>
+          </div>
+
+          <!-- STAVKA 3 -->
+          <div class="carousel-item" data-cat="instagram">
+            <div class="item-preview-wrap">
+              <img src="media/fondacijaPrepravljeno.png" alt="Fondacija" />
+            </div>
+            <div class="item-info">
+              <div class="item-category">Instagram</div>
+              <div class="item-title">HST 2025.</div>
+              <div class="item-desc">Opis rada...</div>
+            </div>
+          </div>
+
+          <!-- STAVKA 4 -->
+          <div class="carousel-item" data-cat="poster">
+            <div class="item-preview-wrap">
+              <img src="media/silent kendi.png" alt="Kendi i struka" />
+            </div>
+            <div class="item-info">
+              <div class="item-category">Poster</div>
+              <div class="item-title">Kendi & Struka</div>
+              <div class="item-desc">Opis rada...</div>
+            </div>
+          </div>
+
+          <!-- STAVKA 5 -->
+          <div class="carousel-item" data-cat="poster">
+            <div class="item-preview-wrap">
+              <img src="media/bailerina.png" alt="Bailerina" />
+            </div>
+            <div class="item-info">
+              <div class="item-category">Poster</div>
+              <div class="item-title">Djordje</div>
+              <div class="item-desc">Opis rada...</div>
+            </div>
+          </div>
+
+          <!-- STAVKA 6 -->
+          <div class="carousel-item" data-cat="invitation">
+            <div class="item-preview-wrap">
+              <img src="media/aftergejming.png" alt="aftergejming" />
+            </div>
+            <div class="item-info">
+              <div class="item-category">Pozivnica</div>
+              <div class="item-title">After gejminga</div>
+              <div class="item-desc">Opis rada...</div>
+            </div>
+          </div>
+
+          <!-- STAVKA 7 -->
+          <div class="carousel-item" data-cat="instagram">
+            <div class="item-preview-wrap">
+              <img src="media/medalja showcase.png" alt="medalja showcase" />
+            </div>
+            <div class="item-info">
+              <div class="item-category">Instagram</div>
+              <div class="item-title">Showcase medalje</div>
+              <div class="item-desc">Opis rada...</div>
+            </div>
+          </div>
+
+          <!-- STAVKA 8 -->
+          <div class="carousel-item" data-cat="poster">
+            <div class="item-preview-wrap">
+              <img src="media/PNG CMYK.png" alt="moj si high" />
+            </div>
+            <div class="item-info">
+              <div class="item-category">Poster</div>
+              <div class="item-title">Moj si high</div>
+              <div class="item-desc">Opis rada...</div>
+            </div>
+          </div>
+
+          <!-- STAVKA 9 -->
+          <div class="carousel-item" data-cat="invitation">
+            <div class="item-preview-wrap">
+              <img
+                src="media/kaligrafija verzija final.png"
+                alt="9. rodjendan"
+              />
+            </div>
+            <div class="item-info">
+              <div class="item-category">Pozivnica</div>
+              <div class="item-title">Pozivnica Unijin 9. rodjendan</div>
+              <div class="item-desc">Opis rada...</div>
+            </div>
+          </div>
+
+          <!-- STAVKA 10 -->
+          <div class="carousel-item" data-cat="poster">
+            <div class="item-preview-wrap">
+              <img src="media/sanjam da si tu.png" alt="piloti" />
+            </div>
+            <div class="item-info">
+              <div class="item-category">Poster</div>
+              <div class="item-title">Kiki Lesendric i Piloti</div>
+              <div class="item-desc">Opis rada...</div>
+            </div>
+          </div>
+
+          <!-- STAVKA 11 -->
+          <div class="carousel-item" data-cat="poster">
+            <div class="item-preview-wrap">
+              <img src="media/zuti u travi.png" alt="kendi" />
+            </div>
+            <div class="item-info">
+              <div class="item-category">Poster</div>
+              <div class="item-title">Kendi&Struka inverzija</div>
+              <div class="item-desc">Opis rada...</div>
+            </div>
+          </div>
+
+          <!-- STAVKA 12 -->
+          <div class="carousel-item" data-cat="instagram">
+            <div class="item-preview-wrap">
+              <img src="media/2.png" alt="najava trke" />
+            </div>
+            <div class="item-info">
+              <div class="item-category">Instagram</div>
+              <div class="item-title">Tizer trke Kraljeva</div>
+              <div class="item-desc">Opis rada...</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script>
+      let currentIndex = 0;
+      let visibleItems = [];
+
+      function getVisible() {
+        return [...document.querySelectorAll(".carousel-item")].filter(
+          (el) => el.style.display !== "none",
+        );
+      }
+
+      function updateCarousel() {
+        visibleItems = getVisible();
+        const maxIndex = Math.max(0, visibleItems.length - 3);
+        currentIndex = Math.min(currentIndex, maxIndex);
+
+        // pomeri track
+        const itemWidth = 100 / 3;
+        document.getElementById("carouselTrack").style.transform =
+          `translateX(-${currentIndex * itemWidth}%)`;
+
+        // counter
+        const page = visibleItems.length <= 3 ? 1 : currentIndex + 1;
+        const pages = Math.max(1, visibleItems.length - 2);
+        document.getElementById("cur").textContent = page;
+        document.getElementById("total").textContent = pages;
+
+        // strelice
+        document.getElementById("prev").disabled = currentIndex === 0;
+        document.getElementById("next").disabled = currentIndex >= maxIndex;
+      }
+
+      function carouselPrev() {
+        currentIndex = Math.max(0, currentIndex - 1);
+        updateCarousel();
+      }
+
+      function carouselNext() {
+        visibleItems = getVisible();
+        const maxIndex = Math.max(0, visibleItems.length - 3);
+        currentIndex = Math.min(maxIndex, currentIndex + 1);
+        updateCarousel();
+      }
+
+      function filterWork(btn, cat) {
+        document
+          .querySelectorAll(".filter-btn")
+          .forEach((b) => b.classList.remove("active"));
+        btn.classList.add("active");
+        currentIndex = 0;
+
+        document.querySelectorAll(".carousel-item").forEach((item) => {
+          item.style.display =
+            cat === "all" || item.dataset.cat === cat ? "" : "none";
+        });
+
+        // reset pozicije track-a za filtriranje
+        document.getElementById("carouselTrack").style.transform =
+          "translateX(0)";
+        updateCarousel();
+      }
+
+      updateCarousel();
+    </script>
   </body>
 </html>

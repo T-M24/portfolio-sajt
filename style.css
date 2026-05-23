@@ -1,0 +1,105 @@
+body {
+  background-color: #361d2e;
+  --serif: 'Cormorant Garamond', serif;
+  --mono: 'DM Mono', monospace;
+  --sans: 'Outfit', sans-serif;
+}
+
+:root {
+  --cream: #F7F4EF;
+  --ink: #1A1714;
+  --charcoal: #2E2A26;
+  --dust: #8C8278;
+  --rose: #C4785A;
+  --gold: #B8995A;
+  --sage: #6B7C6A;
+  --border: #E2DDD6;
+  --serif: 'Cormorant Garamond', serif;
+  --mono: 'DM Mono', monospace;
+  --sans: 'Outfit', sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0
+    /*misterija za sad*/
+  ;
+  background: #B8995A;
+  backdrop-filter: blur(12px);
+}
+
+.nav-logo {
+  font-family: var(--serif);
+  font-size: 1.3rem;
+  font-weight: 400;
+  letter-spacing: 0.02em;
+}
+
+.nav-logo span {
+  font-style: italic;
+  color: var(--rose)
+}
+
+.nav-links {
+  display: flex;
+  gap: 2.5rem;
+  list-style: none
+}
+
+.nav-links a {
+  font-family: var(--mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--dust);
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: var(--ink)
+}
+
+.nav-cta {
+  font-family: var(--mono);
+  font-size: 0.65rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--cream);
+  background: var(--ink);
+  padding: 0.6rem 1.4rem;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s;
+  text-decoration: none;
+}
+
+.nav-cta:hover {
+  background: var(--rose)
+}
+
+.hero {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding-top: 5rem;
+}
+
+.hero-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 6rem 3rem 6rem 3rem;
+  border-right: 1px solid var(--border);
+}

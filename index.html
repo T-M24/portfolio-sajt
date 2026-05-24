@@ -1,377 +1,202 @@
 <!doctype html>
-<html lang="en">
+<html lang="sr">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Teodora Portfolio</title>
-    <link href="style.css" , rel="stylesheet" />
-    <style>
-      *,
-      *::before,
-      *::after {
-        box-sizing: border-box;
-        margin: 0;
-        padding: 0;
-      }
-    </style>
+    <title>Teodora Manjenčić — Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=DM+Mono:wght@300;400&display=swap"
+      rel="stylesheet"
+    />
+    <link href="style.css" rel="stylesheet" />
   </head>
   <body>
-    <!-- NAV DEO -->
-    <!-- linkujem ka top stranici posle nemoj da zab! -->
-    <a href="#" class="nav-logo">TM</a>
-    <ul class="nav-links">
-      <li>Radovi</li>
-      <li>O meni</li>
-      <li>Kontakt</li>
-    </ul>
+    <!-- NAV -->
+    <nav>
+      <a href="#" class="nav-logo">TM</a>
+      <ul class="nav-links">
+        <li><a href="#o-meni">O meni</a></li>
+        <li><a href="#kontakt">Kontakt</a></li>
+      </ul>
+    </nav>
 
+    <!-- HERO: 3 kolone — ime | lista radova | preview -->
     <section class="hero">
       <div class="hero-left">
-        <div class="hero-tag">grafički dizajn kao hobi</div>
-        <h1>Manjenčić <em>Teodora</em></h1>
+        <p class="hero-tag">grafički dizajn kao hobi</p>
+        <h1>Manjenčić<br /><em>Teodora</em></h1>
         <p class="hero-sub">
           Uzimam inspiraciju iz svakodnevnog života i stvari koje volim. Ogromna
           inspiracija su mi muzika, moda i ostale šarene i živopisne stvari oko
           nas.
         </p>
         <div class="hero-actions">
-          <a href="#work" class="btn-primary">Radovi</a>
-          <a href="#about" class="btn-ghost">O meni</a>
+          <a href="#o-meni" class="btn-ghost">O meni</a>
         </div>
       </div>
-      <div class="hero-right">
-        <div class="hero-mosaic-item">
-          <div class="mock-poster mp1">
-            <img src="" style="width: 100%; height: 100%; object-fit: cover" />
-          </div>
-          <div class="mosaic-overlay"><span>Poster</span></div>
+
+      <ul class="hero-lista">
+        <li
+          class="hero-rad"
+          data-img="media/lanci ljubavi.png"
+          onmouseenter="heroShow(this)"
+          onmouseleave="heroHide()"
+        >
+          <span class="hero-rad-num">01</span>
+          <span class="hero-rad-naziv">Lanci ljubavi</span>
+          <span class="hero-rad-cat">Poster</span>
+        </li>
+        <li
+          class="hero-rad"
+          data-img="media/pozivnica jubilej.png"
+          onmouseenter="heroShow(this)"
+          onmouseleave="heroHide()"
+        >
+          <span class="hero-rad-num">02</span>
+          <span class="hero-rad-naziv">Unijin rođendan</span>
+          <span class="hero-rad-cat">Pozivnica</span>
+        </li>
+        <li
+          class="hero-rad"
+          data-img="media/fondacijaPrepravljeno.png"
+          onmouseenter="heroShow(this)"
+          onmouseleave="heroHide()"
+        >
+          <span class="hero-rad-num">03</span>
+          <span class="hero-rad-naziv">HST 2025.</span>
+          <span class="hero-rad-cat">Instagram</span>
+        </li>
+        <li
+          class="hero-rad"
+          data-img="media/silent kendi.png"
+          onmouseenter="heroShow(this)"
+          onmouseleave="heroHide()"
+        >
+          <span class="hero-rad-num">04</span>
+          <span class="hero-rad-naziv">Kendi & Struka</span>
+          <span class="hero-rad-cat">Poster</span>
+        </li>
+
+        <li
+          class="hero-rad"
+          data-img="media/sanjam da si tu.png"
+          onmouseenter="heroShow(this)"
+          onmouseleave="heroHide()"
+        >
+          <span class="hero-rad-num">05</span>
+          <span class="hero-rad-naziv">Kiki Lesendric & Piloti</span>
+          <span class="hero-rad-cat">Poster</span>
+        </li>
+
+        <li
+          class="hero-rad"
+          data-img="media/PNG CMYK.png"
+          onmouseenter="heroShow(this)"
+          onmouseleave="heroHide()"
+        >
+          <span class="hero-rad-num">06</span>
+          <span class="hero-rad-naziv">Moj si high</span>
+          <span class="hero-rad-cat">Poster</span>
+        </li>
+      </ul>
+
+      <div class="hero-preview" id="heroPreview">
+        <div class="hero-placeholder" id="heroPlaceholder">
+          <p>↗ pređi mišem<br />preko rada</p>
         </div>
-        <div class="hero-mosaic-item">
-          <div class="mock-poster mp2">
-            <img src="" style="width: 100%; height: 100%; object-fit: cover" />
-            <div class="mp2-inner">
-              <div class="mp2 spacer"></div>
-            </div>
-          </div>
-          <div class="mosaic-overlay"><span>Pozivnica</span></div>
-        </div>
-        <div class="hero-mosaic-item">
-          <div class="mock-poster mp3">
-            <div class="mp3-inner">
-              <div style="text-align: center"></div>
-              <img
-                src=""
-                style="width: 100%; height: 100%; object-fit: cover"
-              />
-            </div>
-          </div>
-          <div class="mosaic-overlay"><span>Instagram</span></div>
-        </div>
-        <div class="hero-mosaic-item">
-          <div class="mock-poster mp4">
-            <div class="mp4-inner">
-              <img
-                src=""
-                style="width: 100%; height: 100%; object-fit: cover"
-              />
-            </div>
-          </div>
-          <div class="mosaic-overlay"><span>Poster</span></div>
+        <img id="heroImg" src="" alt="" />
+      </div>
+    </section>
+
+    <!-- O MENI -->
+    <section id="o-meni" class="omeni-section">
+      <div class="omeni-left">
+        <span class="section-tag">O meni</span>
+        <h2>
+          Kreativnost<br />kao <em>način<br />života</em>
+        </h2>
+      </div>
+      <div class="omeni-right">
+        <p class="omeni-text">
+          Zdravo! Ja sam Teodora, grafički dizajner iz hobija koji veruje da
+          svaki vizual priča priču. Inspirišu me muzika, moda i šarene stvari
+          oko nas — i to se vidi u svakom radu koji napravim.
+        </p>
+        <p class="omeni-text">
+          Radim postere, pozivnice i Instagram sadržaj koji odiše karakterom i
+          pažnjom prema detaljima.
+        </p>
+        <div class="omeni-tags">
+          <span class="tag">Posteri</span>
+          <span class="tag">Pozivnice</span>
+          <span class="tag">Instagram</span>
+          <span class="tag">Tipografija</span>
+          <span class="tag">Boja & forma</span>
         </div>
       </div>
     </section>
 
-    <!-- SVI RADOVI SEKCIJA!! -->
-    <section id="work">
-      <div class="section-header">
-        <div>
-          <div class="section-tag">Portfolio</div>
-          <h2>Izabrani <em>radovi</em></h2>
-        </div>
-        <div class="carousel-nav">
-          <button class="carousel-arrow" id="prev" onclick="carouselPrev()">
-            ←
-          </button>
-          <span class="carousel-count"
-            ><span id="cur">1</span> / <span id="total">1</span></span
-          >
-          <button class="carousel-arrow" id="next" onclick="carouselNext()">
-            →
-          </button>
-        </div>
-      </div>
-
-      <div class="filter-bar">
-        <button class="filter-btn active" onclick="filterWork(this, 'all')">
-          Svi radovi
-        </button>
-        <button class="filter-btn" onclick="filterWork(this, 'poster')">
-          Posteri
-        </button>
-        <button class="filter-btn" onclick="filterWork(this, 'invitation')">
-          Pozivnice
-        </button>
-        <button class="filter-btn" onclick="filterWork(this, 'instagram')">
-          Instagram
-        </button>
-      </div>
-
-      <div class="carousel-wrapper">
-        <div class="carousel-track" id="carouselTrack">
-          <!-- STAVKA 1 -->
-          <div class="carousel-item" data-cat="poster">
-            <div class="item-preview-wrap">
-              <img src="media/lanci ljubavi.png" alt="Lanci ljubavi" />
-            </div>
-            <div class="item-info">
-              <div class="item-category">Poster</div>
-              <div class="item-title">Lanci ljubavi</div>
-              <div class="item-desc">Opis rada...</div>
-            </div>
-          </div>
-
-          <!-- STAVKA 2 -->
-          <div class="carousel-item" data-cat="invitation">
-            <div class="item-preview-wrap">
-              <img src="media/pozivnica jubilej.png" alt="Pozivnica jubilej" />
-            </div>
-            <div class="item-info">
-              <div class="item-category">Pozivnica</div>
-              <div class="item-title">Unijin rođendan</div>
-              <div class="item-desc">
-                Pozivnica za Unijin jubilarni 10. rođendan
-              </div>
-            </div>
-          </div>
-
-          <!-- STAVKA 3 -->
-          <div class="carousel-item" data-cat="instagram">
-            <div class="item-preview-wrap">
-              <img src="media/fondacijaPrepravljeno.png" alt="Fondacija" />
-            </div>
-            <div class="item-info">
-              <div class="item-category">Instagram</div>
-              <div class="item-title">HST 2025.</div>
-              <div class="item-desc">
-                Objava urađena za predstavljanje humanitarne organizacije sa
-                <br />
-                kojom se sarađivalo na Humanitarnom sportskom turniru 2025.
-                godine
-              </div>
-            </div>
-          </div>
-
-          <!-- STAVKA 4 -->
-          <div class="carousel-item" data-cat="poster">
-            <div class="item-preview-wrap">
-              <img src="media/silent kendi.png" alt="Kendi i struka" />
-            </div>
-            <div class="item-info">
-              <div class="item-category">Poster</div>
-              <div class="item-title">Kendi & Struka</div>
-              <div class="item-desc">Opis rada...</div>
-            </div>
-          </div>
-
-          <!-- STAVKA 5 -->
-          <div class="carousel-item" data-cat="poster">
-            <div class="item-preview-wrap">
-              <img src="media/bailerina.png" alt="Bailerina" />
-            </div>
-            <div class="item-info">
-              <div class="item-category">Poster</div>
-              <div class="item-title">Djordje</div>
-              <div class="item-desc">Opis rada...</div>
-            </div>
-          </div>
-
-          <!-- STAVKA 6 -->
-          <div class="carousel-item" data-cat="invitation">
-            <div class="item-preview-wrap">
-              <img src="media/aftergejming.png" alt="aftergejming" />
-            </div>
-            <div class="item-info">
-              <div class="item-category">Pozivnica</div>
-              <div class="item-title">After gejminga</div>
-              <div class="item-desc">Opis rada...</div>
-            </div>
-          </div>
-
-          <!-- STAVKA 7 -->
-          <div class="carousel-item" data-cat="instagram">
-            <div class="item-preview-wrap">
-              <img src="media/medalja showcase.png" alt="medalja showcase" />
-            </div>
-            <div class="item-info">
-              <div class="item-category">Instagram</div>
-              <div class="item-title">Showcase medalje</div>
-              <div class="item-desc">Opis rada...</div>
-            </div>
-          </div>
-
-          <!-- STAVKA 8 -->
-          <div class="carousel-item" data-cat="poster">
-            <div class="item-preview-wrap">
-              <img src="media/PNG CMYK.png" alt="moj si high" />
-            </div>
-            <div class="item-info">
-              <div class="item-category">Poster</div>
-              <div class="item-title">Moj si high</div>
-              <div class="item-desc">Opis rada...</div>
-            </div>
-          </div>
-
-          <!-- STAVKA 9 -->
-          <div class="carousel-item" data-cat="invitation">
-            <div class="item-preview-wrap">
-              <img
-                src="media/kaligrafija verzija final.png"
-                alt="9. rodjendan"
-              />
-            </div>
-            <div class="item-info">
-              <div class="item-category">Pozivnica</div>
-              <div class="item-title">Pozivnica Unijin 9. rodjendan</div>
-              <div class="item-desc">Opis rada...</div>
-            </div>
-          </div>
-
-          <!-- STAVKA 10 -->
-          <div class="carousel-item" data-cat="poster">
-            <div class="item-preview-wrap">
-              <img src="media/sanjam da si tu.png" alt="piloti" />
-            </div>
-            <div class="item-info">
-              <div class="item-category">Poster</div>
-              <div class="item-title">Kiki Lesendric i Piloti</div>
-              <div class="item-desc">Opis rada...</div>
-            </div>
-          </div>
-
-          <!-- STAVKA 11 -->
-          <div class="carousel-item" data-cat="poster">
-            <div class="item-preview-wrap">
-              <img src="media/zuti u travi.png" alt="kendi" />
-            </div>
-            <div class="item-info">
-              <div class="item-category">Poster</div>
-              <div class="item-title">Kendi&Struka inverzija</div>
-              <div class="item-desc">Opis rada...</div>
-            </div>
-          </div>
-
-          <!-- STAVKA 12 -->
-          <div class="carousel-item" data-cat="instagram">
-            <div class="item-preview-wrap">
-              <img src="media/2.png" alt="najava trke" />
-            </div>
-            <div class="item-info">
-              <div class="item-category">Instagram</div>
-              <div class="item-title">Tizer trke Kraljeva</div>
-              <div class="item-desc">Opis rada...</div>
-            </div>
-          </div>
-
-          <!-- STAVKA 13 -->
-          <div class="carousel-item" data-cat="instagram">
-            <div class="item-preview-wrap">
-              <img src="media/9.png" alt="najava trke" />
-            </div>
-            <div class="item-info">
-              <div class="item-category">Instagram</div>
-              <div class="item-title">Prijave za trku Kraljeva</div>
-              <div class="item-desc">1. deo</div>
-            </div>
-          </div>
-
-          <!-- STAVKA 13 -->
-          <div class="carousel-item" data-cat="instagram">
-            <div class="item-preview-wrap">
-              <img src="media/8.png" alt="najava trke" />
-            </div>
-            <div class="item-info">
-              <div class="item-category">Instagram</div>
-              <div class="item-title">Prijave za trku Kraljeva</div>
-              <div class="item-desc">2. deo</div>
-            </div>
-          </div>
-
-          <!-- STAVKA 13 -->
-          <div class="carousel-item" data-cat="instagram">
-            <div class="item-preview-wrap">
-              <img src="media/7.png" alt="najava trke" />
-            </div>
-            <div class="item-info">
-              <div class="item-category">Instagram</div>
-              <div class="item-title">Prijave za trku Kraljeva</div>
-              <div class="item-desc">3. deo</div>
-            </div>
-          </div>
+    <!-- KONTAKT -->
+    <section id="kontakt" class="kontakt-section">
+      <div class="kontakt-inner">
+        <span class="section-tag">Kontakt</span>
+        <h2>Hajde da napravimo<br />nešto <em>lepo</em></h2>
+        <div class="kontakt-links">
+          <a href="mailto:tvoj@email.com" class="kontakt-link">
+            <span class="kontakt-link-label">Email</span>
+            <span class="kontakt-link-val">tvoj@email.com ↗</span>
+          </a>
+          <a href="https://instagram.com/tvojprofil" class="kontakt-link">
+            <span class="kontakt-link-label">Instagram</span>
+            <span class="kontakt-link-val">@tvojprofil ↗</span>
+          </a>
         </div>
       </div>
     </section>
+
+    <!-- FOOTER -->
+    <footer>
+      <span class="footer-logo">Teodora Manjenčić</span>
+      <span class="footer-copy">© 2025</span>
+    </footer>
+
     <script>
-      let currentIndex = 0;
-      let visibleItems = [];
+      // ── HERO PREVIEW ──────────────────────────────
+      function heroShow(el) {
+        const src = el.dataset.img;
+        const img = document.getElementById("heroImg");
+        const placeholder = document.getElementById("heroPlaceholder");
 
-      function getVisible() {
-        return [...document.querySelectorAll(".carousel-item")].filter(
-          (el) => el.style.display !== "none",
-        );
+        img.style.transition = "none";
+        img.style.opacity = "0";
+        img.style.transform = "scale(0.96)";
+
+        const activate = () => {
+          placeholder.style.opacity = "0";
+          requestAnimationFrame(() => {
+            img.style.transition = "opacity 0.45s ease, transform 0.45s ease";
+            img.style.opacity = "1";
+            img.style.transform = "scale(1)";
+          });
+        };
+
+        if (img.getAttribute("src") === src && img.complete) {
+          activate();
+        } else {
+          img.onload = activate;
+          img.src = src;
+        }
       }
 
-      function updateCarousel() {
-        visibleItems = getVisible();
-        const maxIndex = Math.max(0, visibleItems.length - 3);
-        currentIndex = Math.min(currentIndex, maxIndex);
-
-        // pomeri track
-        const itemWidth = 100 / 3;
-        document.getElementById("carouselTrack").style.transform =
-          `translateX(-${currentIndex * itemWidth}%)`;
-
-        // counter
-        const page = visibleItems.length <= 3 ? 1 : currentIndex + 1;
-        const pages = Math.max(1, visibleItems.length - 2);
-        document.getElementById("cur").textContent = page;
-        document.getElementById("total").textContent = pages;
-
-        // strelice
-        document.getElementById("prev").disabled = currentIndex === 0;
-        document.getElementById("next").disabled = currentIndex >= maxIndex;
+      function heroHide() {
+        const img = document.getElementById("heroImg");
+        const placeholder = document.getElementById("heroPlaceholder");
+        img.style.transition = "opacity 0.35s ease, transform 0.35s ease";
+        img.style.opacity = "0";
+        img.style.transform = "scale(0.96)";
+        placeholder.style.opacity = "1";
       }
-
-      function carouselPrev() {
-        currentIndex = Math.max(0, currentIndex - 1);
-        updateCarousel();
-      }
-
-      function carouselNext() {
-        visibleItems = getVisible();
-        const maxIndex = Math.max(0, visibleItems.length - 3);
-        currentIndex = Math.min(maxIndex, currentIndex + 1);
-        updateCarousel();
-      }
-
-      function filterWork(btn, cat) {
-        document
-          .querySelectorAll(".filter-btn")
-          .forEach((b) => b.classList.remove("active"));
-        btn.classList.add("active");
-        currentIndex = 0;
-
-        document.querySelectorAll(".carousel-item").forEach((item) => {
-          item.style.display =
-            cat === "all" || item.dataset.cat === cat ? "" : "none";
-        });
-
-        // reset pozicije track-a za filtriranje
-        document.getElementById("carouselTrack").style.transform =
-          "translateX(0)";
-        updateCarousel();
-      }
-
-      updateCarousel();
     </script>
   </body>
 </html>

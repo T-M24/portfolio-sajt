@@ -110,6 +110,13 @@ nav {
   flex-shrink: 0;
 }
 
+.hero-lista {
+  font-family: var(--mono);
+  text-transform: uppercase;
+}
+
+/* ^^^^^^FIX ZA FONT TREBA DA URADIM! da bude monospace! */
+
 h1 {
   font-family: var(--serif);
   font-size: clamp(3rem, 5vw, 5rem);

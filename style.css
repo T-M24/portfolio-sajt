@@ -302,6 +302,8 @@ h1 em {
   grid-template-columns: 1fr 1.5fr;
   border-top: 1px solid var(--border);
   border-bottom: 1px solid var(--border);
+  background-color: #361d2e;
+  color: white;
 }
 
 .omeni-left {
@@ -324,7 +326,7 @@ h1 em {
 .omeni-text {
   font-family: var(--serif);
   font-size: 1rem;
-  color: var(--dust);
+  color: white;
   line-height: 1.8;
   max-width: 52ch;
 }
@@ -351,79 +353,6 @@ h1 em {
   background: var(--ink);
   color: var(--cream);
   border-color: var(--ink);
-}
-
-/* ── KONTAKT ────────────────────────────────────── */
-.kontakt-section {
-  background: var(--ink);
-}
-
-.kontakt-inner {
-  padding: 6rem 4rem;
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-  max-width: 700px;
-}
-
-.kontakt-section .section-tag {
-  color: rgba(196, 120, 90, 0.75);
-}
-
-.kontakt-section .section-tag::before {
-  background: rgba(196, 120, 90, 0.75);
-}
-
-.kontakt-section h2 {
-  color: var(--cream);
-  font-size: clamp(2.5rem, 5vw, 4rem);
-  line-height: 1.05;
-}
-
-.kontakt-section h2 em {
-  color: var(--rose);
-}
-
-.kontakt-links {
-  display: flex;
-  flex-direction: column;
-  margin-top: 1rem;
-}
-
-.kontakt-link {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 1.25rem 0;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.07);
-  text-decoration: none;
-  transition: padding-left 0.3s;
-}
-
-.kontakt-link:hover {
-  padding-left: 0.5rem;
-}
-
-.kontakt-link-label {
-  font-family: var(--mono);
-  font-size: 0.56rem;
-  letter-spacing: 0.15em;
-  text-transform: uppercase;
-  color: rgba(245, 240, 232, 0.25);
-  min-width: 6rem;
-}
-
-.kontakt-link-val {
-  font-family: var(--serif);
-  font-size: 1.1rem;
-  font-weight: 300;
-  font-style: italic;
-  color: var(--cream);
-  transition: color 0.3s;
-}
-
-.kontakt-link:hover .kontakt-link-val {
-  color: var(--rose);
 }
 
 footer {
@@ -479,26 +408,6 @@ footer {
     height: 70vw;
   }
 
-  .radovi-header {
-    padding: 2.5rem 2rem 2rem;
-  }
-
-  .radovi-body {
-    grid-template-columns: 1fr;
-  }
-
-  .radovi-preview-wrap {
-    position: relative;
-    top: 0;
-    height: 70vw;
-    border-right: none;
-    border-bottom: 1px solid var(--border);
-  }
-
-  .rad-item {
-    padding: 1.5rem 2rem;
-  }
-
   .omeni-section {
     grid-template-columns: 1fr;
   }
@@ -511,10 +420,6 @@ footer {
 
   .omeni-right {
     padding: 3rem 2rem;
-  }
-
-  .kontakt-inner {
-    padding: 4rem 2rem;
   }
 
   footer {
